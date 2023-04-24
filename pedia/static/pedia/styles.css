@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+:root {
+    --body-bg: hsl(207, 26%, 17%);
+    --body-color: hsl(0, 0%, 100%);
+    --header-bg: hsl(209, 23%, 22%);
+    --box-shadow: hsl(209, 23%, 22%);
+}
+
+body {
+    background-color: var(--body-bg);
+    color: var(--body-color);
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+header {
+    background-color: var(--header-bg);
+    color: var(--body-color);
+    box-shadow: 0px 1px 1px 1px var(--box-shadow);
+    padding: 20px 100px;
+}
+
+header *{
+    vertical-align: middle;
+    display: inline-block;
+}
+
+header .options {
+    float: right;
+}
+
+header .options a{
+    margin: 0px 10px;
+    padding: 5px 10px;
+    text-decoration: none;
+    background-color: var(--body-bg);
+    color: var(--body-color);
+    box-shadow: 0px 1px 1px 1px var(--box-shadow);
+    border-radius: 8px;
+}
+
+header .options input{
+    color: var(--header-bg);
+    margin: 0px 10px;
+    padding: 5px;
+    height: 20px;
+    width: 15vw;
+    border-radius: 8px;
+    border: none;
+}
+
+header .options input:focus-visible {
+    outline: none;
+}
+
+.main-body {
+    margin: 50px 100px;
+}
+.main-body .card {
+    text-align: center;
+    width: 26%;
+    background-color: var(--header-bg);
+    box-shadow: 0px 1px 1px 1px var(--box-shadow);
+    cursor: pointer;
+    border-radius: 12px;
+    display: inline-block;
+    color: var(--body-color);
+    margin-right: 95px;
+    margin-top: 50px;
+}
+
+.card h2 {
+    padding: 10px 0px;
+}
+
+.card p {
+    padding: 10px 10px
+}
+
+/* add page styles */
+.addPage {
+    margin: 90px 100px;
+    margin-bottom: 0;
+}
+.addPage label {
+    display: block;
+    font-weight: 600;
+    padding: 5px 0px;
+    font-size: 2rem;
+}
+
+.addPage input {
+    margin-bottom: 50px;
+    width: 50%;
+    padding: 10px;
+}
+
+.addPage button {
+    display: block;
+}
+
+.addPage textarea {
+    margin-bottom: 30px;
+    width: 50%;
+    padding: 10px;
+}
+.addPage button {
+    padding: 20px 50px;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: var(--header-bg);
+    border: none;
+    box-shadow: 0px 1px 1px 1px var(--box-shadow);
+    color: var(--body-color);
+    font-weight: 600;
+}
+
+.message {
+    font-weight: 600;
+}

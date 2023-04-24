@@ -1,0 +1,18 @@
+{% extends 'pedia/header.html' %} 
+
+{% block body %} 
+    <div class="addPage">
+        {% if message %} 
+            <p class="message">{{message}}</p>
+        {% endif %}
+
+        <form action="{% url 'add' %}" method="post">
+            {% csrf_token %} 
+            <label for="title">title</label>
+            <input type="text" placeholder="title" name="title" value="{{title}}">
+            <label for="body">descripation</label>
+            <textarea type="textarea" name="body" rows="12">{{body}}</textarea>
+            <button type="submit">Add</button>
+        </form>
+    </div>
+{% endblock %}

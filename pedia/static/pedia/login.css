@@ -1,0 +1,62 @@
+
+.login-main {
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+    text-align: center;
+}
+
+.login-main div {
+    width: 25%;
+    background-color: var(--header-bg);
+    box-shadow: 0px 1px 1px 1px var(--box-shadow);
+    border-radius: 8px;
+    padding: 10px 0;
+}
+
+.login-main form {
+    margin: 20px 50px;
+    text-align: left;
+}
+
+.login-main input {
+    display: block;
+    color: var(--header-bg);
+    padding: 5px;
+    height: 20px;
+    width: 15vw;
+    border-radius: 8px;
+    border: none;
+}
+
+input:focus-visible {
+    outline: none;
+}
+
+.login-main label {
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.login-main button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: var(--body-bg);
+    border: none;
+    box-shadow: 0px 1px 1px 1px var(--box-shadow);
+    color: var(--body-color);
+}
+
+.login-main a {
+    color: var(--body-color);
+}
+
+#singup {
+    margin-top: 100px;
+}
+
+.message {
+    font-weight: 600;
+}

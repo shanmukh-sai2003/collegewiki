@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'pedia/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'pedia/login.css' %}">
+    <title>sing up</title>
+</head>
+<body>
+    <div class="login-main" id = "singup">
+        <div>
+            {% if message %}
+                <p>{{message}}</p>
+            {% endif %}
+            
+            <h1>Sing Up</h1>
+            <form action="{% url 'singup' %}" method="post">
+                {% csrf_token %}
+                <label for="username">first name</label>
+                <input type="text" placeholder="firstname" name="firstname">
+                <label for="username">last name</label>
+                <input type="text" placeholder="lastname" name="lastname">
+                <label for="username">email</label>
+                <input type="text" placeholder="email" name="email">
+                <label for="password">password</label>
+                <input type="password" placeholder="password" name="password1">
+                <label for="password">confirm password</label>
+                <input type="password" placeholder="password" name="password2">
+                <button type="submit">sing up</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

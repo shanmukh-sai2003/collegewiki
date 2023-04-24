@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'pedia/styles.css' %}">
+    <title>College wiki</title>
+</head>
+<body>
+    <header>
+        <h1>College wiki</h1>
+        <div class="options">
+            <form action="{% url 'home' %}" method="post">
+                {% csrf_token %}
+                <input id="search" type="text" placeholder="search" name="search">
+            </form>
+            {% if logged %}
+                <a href="add/">add</a>
+                <a href="logout/">logout</a>
+            {% else %}
+                <a href="login/">login</a>
+            {% endif %}
+        </div>
+    </header>
+    <div class="main-body">
+        {% if message %} 
+            <p class="message">{{message}}</p>
+        {% endif %}
+        {% for entry in pedias %}
+            <a href="{{entry.title}}">
+                <div class="card">
+                    <h2>{{entry.title}}</h2>
+                    <p>{{entry.body|slice:"0:200"}}...</p>
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+</body>
+</html> 
