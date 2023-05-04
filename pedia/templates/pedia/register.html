@@ -16,8 +16,8 @@
                 <p>{{message}}</p>
             {% endif %}
             
-            <h1>Sing Up</h1>
-            <form action="{% url 'singup' %}" method="post">
+            <h1>Sign Up</h1>
+            <form action="{% url 'signup' %}" method="post">
                 {% csrf_token %}
                 <label for="username">first name</label>
                 <input type="text" placeholder="firstname" name="firstname">

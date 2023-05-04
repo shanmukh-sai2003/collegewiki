@@ -92,8 +92,8 @@ def logout_view(request):
     logout(request)
     return HttpResponseRedirect(reverse('home'))
 
-#handle singup page
-def singup(request):
+#handle signup page
+def signup(request):
     if request.method == "POST":
         firstname = request.POST["firstname"]
         lastname = request.POST["lastname"]
