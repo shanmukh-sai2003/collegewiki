@@ -17,10 +17,10 @@
                 <input type="text" placeholder="search">
             </form>
             {% if logged %}
-                <a href="{% url 'add' %}">add</a>
-                <a href="{% url 'logout' %}">logout</a>
+                <a href="add/">add</a>
+                <a href="logout/">logout</a>
             {% else %}
-                <a href="{% url 'login' %}">login</a>
+                <a href="login/">login</a>
             {% endif %}
         </div>
     </header>
