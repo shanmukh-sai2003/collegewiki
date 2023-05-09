@@ -16,7 +16,7 @@ To add a note you must have an account and you should be logged in
  ![2023-04-24 (1)](https://user-images.githubusercontent.com/104721888/234072421-d065f254-b3ca-4a7c-a7e5-dfc8901834d4.png)
 
 # sign up page
-![2023-04-24 (2)](https://user-images.githubusercontent.com/104721888/234072467-ebc6eeab-cde8-4531-a13f-f59bb8ab0dd5.png)
+![2023-05-04](https://user-images.githubusercontent.com/104721888/236282217-8ce7efa4-d102-4266-ba4a-3ff2316b4855.png)
 
 # home page after login
 ![2023-04-24 (3)](https://user-images.githubusercontent.com/104721888/234072550-c57d03e5-ad87-4b2d-9801-010c38b40cc3.png)
