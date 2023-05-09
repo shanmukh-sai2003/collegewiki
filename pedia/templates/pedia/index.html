@@ -33,6 +33,7 @@
                 <div class="card">
                     <h2>{{entry.title}}</h2>
                     <p>{{entry.body|slice:"0:200"}}...</p>
+                    <h3>By: {{entry.userName}}</h3>
                 </div>
             </a>
         {% endfor %}

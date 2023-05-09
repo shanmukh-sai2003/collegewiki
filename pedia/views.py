@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.contrib.auth import authenticate, login, logout
@@ -6,16 +6,13 @@ from django.contrib.auth.models import User
 from .models import *
 
 # Create your views here.
-
 #handles home page
 def index(request):
     if request.method == "POST":
         search = request.POST["search"]
         if Entry.objects.filter(title = search):
-            return render(request, 'pedia/fullpage.html', {
-                "entry": Entry.objects.get(title = search),
-                "logger": request.user.is_authenticated
-            })
+            url = search + "/"
+            return redirect(url)
         else:
             return render(request, 'pedia/index.html', {
                 "pedias": Entry.objects.all(),
@@ -55,12 +52,10 @@ def add(request):
                 "logged": request.user.is_authenticated
             })
         
-        newEntry = Entry.objects.create(title = title, body = body)
+        newEntry = Entry.objects.create(userName = request.user.username, title = title, body = body)
         newEntry.save()
-        return render(request, 'pedia/fullpage.html', {
-            "entry" : newEntry,
-            "logged": request.user.is_authenticated
-        })
+        url = title + "/"
+        return redirect(url)
     if request.user.is_authenticated:
         return render(request, 'pedia/add.html', {
             "logged": request.user.is_authenticated
